@@ -11,17 +11,25 @@ public class Book {
 		this.available = true;
 	}
 
-	public void displayDetailes(){
-		String detailes = "Título: " this.title + ", " + "autor: " +this.author + ", isbn: " + this.isbn + ", disponível para empréstimo: " + this.available
+	public void displayDetailes() {
+		String detailes = "Título: " + this.title + ", " + "autor: " + this.author + ", isbn: " + this.isbn + ", disponível para empréstimo: " + this.available;
 		System.out.println(detailes);
 	}
 
-	public void lend(){
+	public void lend() {
 		this.available = false;
 	}
 
-	public  void  givBack(){
+	public void givBack() {
 		this.available = true;
+	}
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public String getIsbn() {
+		return isbn;
 	}
 
 }
