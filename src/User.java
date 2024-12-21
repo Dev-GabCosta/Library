@@ -11,8 +11,8 @@ public class User {
 		this.id = id;
 	}
 
-	public void displayDetailes(){
-		String  detailes = "Nome: " + this.name + ", id: " + this.id;
+	public void displayDetailes() {
+		String detailes = "Nome: " + this.name + ", id: " + this.id;
 		System.out.println(detailes);
 	}
 
@@ -20,8 +20,17 @@ public class User {
 		borrowedBooks.add(book);
 	}
 
-	public  void removeBook(Book book){
+	public  void removeBook(Book book) {
 		borrowedBooks.remove(book);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public int displayAmountOfBooks(){
+
+		return borrowedBooks.size();
 	}
 
 }
