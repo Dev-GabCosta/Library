@@ -94,7 +94,8 @@ public class Library {
 	public void displayUsers() {
 
 		for (User user : users) {
-			System.out.println(user);
+			user.displayDetailes();
 		}
 	}
+
 }
