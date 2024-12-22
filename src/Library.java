@@ -26,7 +26,7 @@ public class Library {
 
 		}
 
-		if (user    .displayAmountOfBooks() == 3) {
+		if (user.displayAmountOfBooks() == 3) {
 			System.out.println("Esse usuário já possui 3 livros emprestados a ele");
 		}
 
@@ -51,11 +51,11 @@ public class Library {
 
 		if (!book.isAvailable()) {
 			System.out.println("O livro já está emprestado.");
+		} else {
+			book.lend();
+			user.addBook(book);
+			System.out.println("Livro emprestado com sucesso ao usuário com ID: " + userId);
 		}
-
-		book.lend();
-		user.addBook(book);
-		System.out.println("Livro emprestado com sucesso ao usuário com ID: " + userId);
 
 	}
 
