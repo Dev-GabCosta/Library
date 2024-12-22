@@ -17,10 +17,6 @@ public class Library {
 	public void lendBook(String isbn, int userId) {
 		User user = null;
 
-		if (user.displayAmountOfBooks() == 3){
-			System.out.println("Esse usuário já possui 3 livros emprestados a ele");
-		}
-
 		for (User u : users) {
 
 			if (u.getId() == userId) {
@@ -28,6 +24,10 @@ public class Library {
 				break;
 			}
 
+		}
+
+		if (user    .displayAmountOfBooks() == 3) {
+			System.out.println("Esse usuário já possui 3 livros emprestados a ele");
 		}
 
 		if (user == null) {
@@ -83,7 +83,7 @@ public class Library {
 
 		for (Book b : books) {
 
-			if (b.isAvailable()){
+			if (b.isAvailable()) {
 				b.displayDetailes();
 			}
 
@@ -91,4 +91,10 @@ public class Library {
 
 	}
 
+	public void displayUsers() {
+
+		for (User user : users) {
+			System.out.println(user);
+		}
+	}
 }
